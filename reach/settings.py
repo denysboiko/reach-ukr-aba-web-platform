@@ -235,15 +235,25 @@ else:
     # }
     DATABASES = {
         'default': {
-            'CONN_MAX_AGE': 0,
-            'ENGINE': 'django.db.backends.sqlite3',
-            'HOST': 'localhost',
-            'NAME': 'project.db',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'ebdb',
+            'USER': '',
             'PASSWORD': '',
-            'PORT': '',
-            'USER': ''
+            'HOST': 'localhost',
+            'PORT': '5432',
         }
     }
+    # DATABASES = {
+    #     'default': {
+    #         'CONN_MAX_AGE': 0,
+    #         'ENGINE': 'django.db.backends.sqlite3',
+    #         'HOST': 'localhost',
+    #         'NAME': 'project.db',
+    #         'PASSWORD': '',
+    #         'PORT': '',
+    #         'USER': ''
+    #     }
+    # }
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
